@@ -46,8 +46,8 @@ class VowelHash
 				m=index*5;
 				repnum=String.valueOf(oddsum(m));
 				repchar=repnum.charAt(0);
-				outstr=instr.replace(instr.charAt(j),repchar);
-				instr=outstr;
+				outstr=instr.substring(0,j)+repchar+instr.substring(j+1);//instr.replace(instr.charAt(j),repchar);
+				instr=outstr.replaceAll("\\s","");
 				z++;
 			}
 			if(z==0)
